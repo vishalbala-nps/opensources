@@ -1,0 +1,16 @@
+This Repo contains various build_spec.yml files to build open source Repos using OCI DevOps Build Service
+
+To use this repo/Buidlspec files, you need to define the build stage with primary source with following properties:
+name: src1
+Repo: https://github.com/vishalbala-nps/opensources
+branch: main
+buildspec file as one of the files below
+
+
+1. kafka_build_spec.yml
+   - This build spec file builds kafka. To buidl kafka, you need to add the additonal source with below values:
+     name: src2
+     Repo: https://github.com/apache/kafka
+     branch: trunk
+     
+     It produces kafka build logs in customer logs and produces a txt file with timestamp as a BINARY output Artifact
