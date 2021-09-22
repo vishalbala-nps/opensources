@@ -12,9 +12,9 @@ steps:
     name: "kafka Build"
     command: |
       version=20
-      date >> ${OCI_WORKSPACE_DIR}/src1/kafka.txt
       cd ${OCI_WORKSPACE_DIR}/src2
       ./gradlew jar
+      date >> ${OCI_WORKSPACE_DIR}/src1/kafka.txt
       
 
 outputArtifacts:
