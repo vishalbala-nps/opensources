@@ -13,6 +13,7 @@ steps:
     command: |
       version=20
       cd ${OCI_WORKSPACE_DIR}/src2
+      chmod 777 ./gradlew
       ./gradlew jar
       date >> ${OCI_WORKSPACE_DIR}/src1/kafka.txt
       
